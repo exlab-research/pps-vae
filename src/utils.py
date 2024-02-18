@@ -94,6 +94,9 @@ def get_model_number_param(model):
 
 def get_inp_out_dirs(config_object):
     data_dir = "../data"
+    if os.path.exists(data_dir) == False:
+        os.mkdir(data_dir)
+        
     result_dir = "../results/"
     if os.path.exists(result_dir) == False:
         os.mkdir(result_dir)
